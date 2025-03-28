@@ -1,19 +1,36 @@
+#######################################################################
+# Wiki.js - CONFIGURATION                                             #
+#######################################################################
+# Full documentation + examples:
+# https://docs.requarks.io/install
+
+# ---------------------------------------------------------------------
+# Port the server should listen to
+# ---------------------------------------------------------------------
+
 port: 3000
+
+# ---------------------------------------------------------------------
+# Database
+# ---------------------------------------------------------------------
+# Supported Database Engines:
+# - postgres = PostgreSQL 9.5 or later
 
 db:
   type: postgres
   host: dpg-cvj9sd3ipnbc73e05isg-a.singapore-postgres.render.com
   port: 5432
   user: pharmwiki_user
-  pass: KeaaiatBndKy8tToWZoWg5D2nE0Nqamh
+  pass: KeaaiatBndKy8tTcWZoWg5D2nE0Nqamh
   db: pharmwiki
   ssl: true
-
   sslOptions:
     auto: true
-
   schema: public
-  storage: path/to/database.sqlite
+
+# ---------------------------------------------------------------------
+# Advanced Options
+# ---------------------------------------------------------------------
 
 ssl:
   enabled: false
@@ -25,8 +42,8 @@ ssl:
   pfx: path/to/cert.pfx
   passphrase: null
   dhparam: null
-  domain: wiki.yourdomain.com
-  subscriberEmail: admin@example.com
+  domain: pharmwiki.kr
+  subscriberEmail: yesohg@gmail.com
 
 pool:
   # min: 2
@@ -36,11 +53,7 @@ bindIP: 0.0.0.0
 
 logLevel: info
 logFormat: default
-
 offline: false
-
 ha: false
-
 dataPath: ./data
-
 bodyParserLimit: 5mb
